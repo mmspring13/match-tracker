@@ -1,0 +1,67 @@
+@use "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #090909;
+    --foreground: #ededed;
+  }
+}
+
+:root, .radix-themes:where([data-gray-color="slate"]) {
+  --gray-1: #090909;
+  --gray-2: #0B0E12;
+  --gray-3: #101318;
+  --gray-11: #B4B5B6;
+  --gray-12: #FAFAFA;
+  --gray-13: #787878;
+}
+
+@theme {
+  --color-gray-1000: var(--gray-1);
+  --color-gray-1050: var(--gray-2);
+  --color-gray-1100: var(--gray-3);
+  --color-gray-1150: var(--gray-11);
+  --color-gray-1200: var(--gray-12);
+  --color-gray-1250: var(--gray-13);
+}
+
+@theme {
+  --color-brand: #EB0237;
+  --color-brand-2: #A01131;
+  --color-brand-3: #701328;
+
+  --color-success: #43AD28;
+
+  --color-warning: #EB6402;
+
+  --brand-max-width-container: 120rem;
+}
+
+[data-accent-color="red"] {
+  --accent-3: var(--color-brand, '#000');
+  --accent-5: var(--color-brand-3, '#000');
+  --accent-9: var(--color-brand, '#000');
+  --accent-10: var(--color-brand-2, '#000');
+}
+
+[data-accent-color="green"] {
+  --accent-3: var(--color-success, '#000');
+}
+
+[data-accent-color="orange"] {
+  --accent-3: var(--color-warning, '#000');
+}
+
+.radix-themes {
+  background: none;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}

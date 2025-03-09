@@ -1,0 +1,8 @@
+@use "tailwindcss";
+
+.AppButton {
+  @apply h-auto;
+  &:disabled {
+    background-color: var(--accent-5);
+  }
+}

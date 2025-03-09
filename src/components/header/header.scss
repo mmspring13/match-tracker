@@ -1,0 +1,10 @@
+@use 'tailwindcss';
+
+.AppHeader {
+  max-width: var(--brand-max-width-container);
+  @apply w-full px-10.5 pt-10.5 mb-5;
+
+  &__refresh-button {
+    @apply py-3.75 px-10 font-semibold text-lg cursor-pointer;
+  }
+}

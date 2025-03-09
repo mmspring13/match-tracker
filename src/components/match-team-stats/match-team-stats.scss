@@ -1,0 +1,39 @@
+@use "tailwindcss";
+@use "@/global/globals.scss";
+
+.MatchTeamStats {
+  &__common-stats {
+    @apply rounded-sm px-6 py-3.25 bg-gray-1100 mt-2;
+  }
+
+  &__common-stat-item {
+    @apply flex-1 flex items-center justify-center relative;
+    &:nth-of-type(even) {
+      &:after, &:before {
+        content: '';
+        display: block;
+        height: 1rem;
+        width: 1px;
+        background-color: #141A21;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      &:after {
+        left: auto;
+      }
+      &:before {
+        right: auto;
+      }
+    }
+    &__text {
+      @apply font-semibold text-base text-nowrap pl-2;
+      &_mark {
+        @apply pr-2 text-sm text-[#FAFAFA66];  ;
+      }
+    }
+  }
+}
